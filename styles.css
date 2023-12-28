@@ -9,3 +9,15 @@ h1, h2 {
     background-color: burlywood;
     width: 90%;
 }
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    padding-top: 20px;
+}
+
+h2 {
+    padding-bottom: 20px;
+}
