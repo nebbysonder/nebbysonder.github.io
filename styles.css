@@ -13,7 +13,7 @@ h1 {
 }
 
 h2 {
-    color: crimson;
+    color: #FC3003;
 }
 
 p {
@@ -24,7 +24,7 @@ p {
 .portal {
     margin-left: auto;
     margin-right: auto;
-    background-color: olivedrab;
+    background-color: #013025;
     width: 80%;
     max-width: 750px;
     padding: 20px;
