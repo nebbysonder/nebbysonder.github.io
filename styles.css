@@ -4,8 +4,20 @@ body {
 }
 h1, h2 {
     font-family: sans-serif;
-    color: purple;
+}
+
+h1 {
+    font-size: 56px;
     text-align: center;
+    color: purple;
+}
+
+h2 {
+    color: magenta;
+}
+
+p {
+    font-family: 'Verdana', monospace;
 }
 
 .portal {
@@ -15,12 +27,4 @@ h1, h2 {
     width: 80%;
     max-width: 750px;
     padding: 20px;
-}
-
-h1 {
-    font-size: 56px;
-}
-
-p {
-    font-family: 'Verdana', monospace;
 }
