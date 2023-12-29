@@ -7,13 +7,14 @@ h1, h2 {
 }
 
 h1 {
-    font-size: 4.5rem;
+    font-size: 4rem;
     text-align: center;
     color: purple;
 }
 
 h2 {
     color: #F2D622;
+    margin-top: -0.5rem;
 }
 
 p {
@@ -27,6 +28,5 @@ p {
     background-color: #055735;
     width: 80%;
     max-width: 75rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 2rem;
 }
