@@ -53,7 +53,7 @@ p {
     color: purple;
 }
 
-.navbar a[class="active"] {
+.navbar a.active {
     background-color:#055735;
     color:#F2D622;
 }
