@@ -26,7 +26,7 @@ p, li {
 .grid {
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 90%;
     max-width: 75rem;
     padding: 1rem 2rem;
 }
@@ -34,6 +34,7 @@ p, li {
 .portal {
     background-color: #055735;
     padding: 1rem 2rem;
+    border: #F2D622 solid 4px;
 }
 
 .navbar {
@@ -59,11 +60,12 @@ p, li {
 .navbar a.active {
     background-color:#055735;
     color:#F2D622;
+    border: #F2D622 solid 4px;
+    border-bottom-style: none;
 }
 
 .navbar a.active:hover {
     background-color: #0A9159;
-    color: lightblue;
 }
 
 a.post_link {
