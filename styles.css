@@ -52,8 +52,8 @@ p, li {
 }
 
 .navbar a:hover {
-    background-color: #246931;
-    color: #F2D622;
+    background-color: #0A9159;
+    color: lightblue;
 }
 
 .navbar a.active {
@@ -62,8 +62,8 @@ p, li {
 }
 
 .navbar a.active:hover {
-    background-color: #246931;
-    color:#F2D622;
+    background-color: #0A9159;
+    color: lightblue;
 }
 
 a.post_link {
