@@ -14,7 +14,6 @@ h1 {
 
 h2 {
     color: #F2D622;
-    margin-top: -0.5rem;
 }
 
 p {
@@ -22,11 +21,39 @@ p {
     color: aliceblue;
 }
 
-.portal {
+.grid {
     margin-left: auto;
     margin-right: auto;
-    background-color: #055735;
     width: 80%;
     max-width: 75rem;
-    padding: 2rem;
+    padding: 1rem 2rem;
+}
+
+.portal {
+    background-color: #055735;
+    padding: 1rem 2rem;
+}
+
+.navbar {
+    background-color: #246931;
+}
+
+.navbar a {
+    text-align: center;
+    display: inline-block;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: lightblue;
+    text-decoration: none;
+    padding: 1rem 2rem;
+}
+
+.navbar a:hover {
+    background-color: lightblue;
+    color: purple;
+}
+
+.navbar a[class="active"] {
+    background-color:#055735;
+    color:#F2D622;
 }
