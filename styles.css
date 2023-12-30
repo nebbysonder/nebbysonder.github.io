@@ -14,10 +14,12 @@ h1 {
 
 h2 {
     color: #F2D622;
+    font-size: 2rem;
 }
 
-p {
+p, li {
     font-family: 'Verdana', monospace;
+    font-size: 1.4rem;
     color: aliceblue;
 }
 
@@ -43,6 +45,7 @@ p {
     display: inline-block;
     font-family: sans-serif;
     font-weight: bold;
+    font-size: 1.4rem;
     color: lightblue;
     text-decoration: none;
     padding: 1rem 2rem;
@@ -56,4 +59,14 @@ p {
 .navbar a.active {
     background-color:#055735;
     color:#F2D622;
+}
+
+a.post_link {
+    color: #F2D622;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a.post_link:hover {
+    text-decoration: underline;
 }
