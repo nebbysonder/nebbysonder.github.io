@@ -50,18 +50,20 @@ p, li {
     color: purple;
     text-decoration: none;
     padding: 1rem 2rem;
+    border: #055735 dashed 4px;
 }
 
 .navbar a:hover {
     background-color: #0A9159;
     color: lightblue;
+    border-style: solid;
 }
 
 .navbar a.active {
     background-color:#055735;
     color:#F2D622;
-    border: #F2D622 solid 4px;
-    border-bottom-style: none;
+    border-color: #F2D622;
+    border-style: solid;
 }
 
 .navbar a.active:hover {
