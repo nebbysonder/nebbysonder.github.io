@@ -37,7 +37,7 @@ p, li {
 }
 
 .navbar {
-    background-color: #246931;
+    background-color: lightblue;
 }
 
 .navbar a {
@@ -46,18 +46,23 @@ p, li {
     font-family: sans-serif;
     font-weight: bold;
     font-size: 1.4rem;
-    color: lightblue;
+    color: purple;
     text-decoration: none;
     padding: 1rem 2rem;
 }
 
 .navbar a:hover {
-    background-color: lightblue;
-    color: purple;
+    background-color: #246931;
+    color: #F2D622;
 }
 
 .navbar a.active {
     background-color:#055735;
+    color:#F2D622;
+}
+
+.navbar a.active:hover {
+    background-color: #246931;
     color:#F2D622;
 }
 
