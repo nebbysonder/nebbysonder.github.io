@@ -17,10 +17,16 @@ h2 {
     font-size: 2rem;
 }
 
-p, li {
+p, li, figcaption {
     font-family: 'Verdana', monospace;
     font-size: 1.4rem;
     color: aliceblue;
+}
+
+img {
+    width: 100%;
+    border: 4px solid #F2D622;
+    border-radius: 8px;
 }
 
 .grid {
@@ -33,7 +39,7 @@ p, li {
 
 .portal {
     background-color: #055735;
-    padding: 1rem 2rem;
+    padding: 3% 7%;
     border: #F2D622 solid 4px;
 }
 
@@ -78,4 +84,12 @@ a.post_link {
 
 a.post_link:hover {
     text-decoration: underline;
+}
+
+.post_date {
+    text-align: right;
+}
+
+.post_header {
+    text-align: center;
 }
