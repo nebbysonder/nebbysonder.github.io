@@ -24,9 +24,12 @@ p, li, figcaption {
 }
 
 img {
-    width: 100%;
+    display: block;
+    width: 50%;
+    height: auto;
     border: 4px solid #F2D622;
     border-radius: 8px;
+    margin: 5px auto;
 }
 
 .grid {
@@ -39,8 +42,9 @@ img {
 
 .portal {
     background-color: #055735;
-    padding: 5% 7.5%;
+    padding: 5% 12%;
     border: #F2D622 solid 4px;
+    overflow: auto;
 }
 
 .navbar {
@@ -92,4 +96,23 @@ a.post_link:hover {
 
 .post_header {
     text-align: center;
+}
+
+.spiral {
+    display: block;
+}
+
+.dos {
+    float: right;
+    writing-mode: sideways-rl;
+    white-space: nowrap;
+}
+
+.tres {
+    writing-mode: sideways-lr;
+    white-space: nowrap;
+}
+
+.quatro {
+    transform: rotate(180deg);
 }
