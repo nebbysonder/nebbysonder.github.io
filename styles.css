@@ -44,7 +44,6 @@ img {
     background-color: #055735;
     padding: 5% 12%;
     border: #F2D622 solid 4px;
-    overflow: auto;
 }
 
 .navbar {
@@ -104,13 +103,18 @@ a.post_link:hover {
 
 .dos {
     float: right;
-    writing-mode: sideways-rl;
+    writing-mode: vertical-rl;
     white-space: nowrap;
+    overflow-x: auto;
+    width: 110%;
 }
 
 .tres {
-    writing-mode: sideways-lr;
+    writing-mode: vertical-rl;
     white-space: nowrap;
+    transform: rotate(180deg);
+    overflow-x: auto;
+    width: 110%;
 }
 
 .quatro {
