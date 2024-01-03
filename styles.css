@@ -1,8 +1,8 @@
 body {
     padding: 2rem;
     background-color: lightblue;
-    overflow-x: auto;
 }
+
 h1, h2 {
     font-family: sans-serif;
 }
@@ -45,6 +45,7 @@ img {
     background-color: #055735;
     padding: 5% 12%;
     border: #F2D622 solid 4px;
+    overflow-x: auto;
 }
 
 .navbar {
