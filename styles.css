@@ -1,25 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
 body {
     padding: 2rem;
-    background-color: lightblue;
+    background-color: #FCEBF8;
 }
 
 h1, h2 {
-    font-family: sans-serif;
+    font-family: 'Comfortaa', sans-serif;
 }
 
 h1 {
     font-size: 4rem;
     text-align: center;
-    color: purple;
+    color: #801757;
 }
 
 h2 {
-    color: #F2D622;
+    color: #FCD835;
     font-size: 2rem;
 }
 
 p, li, figcaption {
-    font-family: 'Verdana', monospace;
+    font-family: 'Comic Neue', sans-serif;
     font-size: 1.4rem;
     color: aliceblue;
 }
@@ -28,7 +30,7 @@ img {
     display: block;
     width: 100%;
     height: auto;
-    border: 4px solid #F2D622;
+    border: 4px solid #FCD835;
     border-radius: 8px;
     margin: 5px auto;
 }
@@ -42,46 +44,46 @@ img {
 }
 
 .portal {
-    background-color: #055735;
+    background-color: #801757;
     padding: 5% 12%;
-    border: #F2D622 solid 4px;
+    border: #FCD835 solid 4px;
 }
 
 .navbar {
-    background-color: lightblue;
+    background-color: #FCEBF8;
 }
 
 .navbar a {
     text-align: center;
     display: inline-block;
-    font-family: sans-serif;
+    font-family: 'Comfortaa', sans-serif;
     font-weight: bold;
     font-size: 1.4rem;
-    color: purple;
+    color: #801757;
     text-decoration: none;
     padding: 1rem 2rem;
-    border: #055735 dashed 4px;
+    border: #801757 dashed 4px;
 }
 
 .navbar a:hover {
-    background-color: #0A9159;
-    color: lightblue;
+    background-color: #CD98D9;
+    color: #FCEBF8;
     border-style: solid;
 }
 
 .navbar a.active {
-    background-color:#055735;
-    color:#F2D622;
-    border-color: #F2D622;
+    background-color:#801757;
+    color:#FCD835;
+    border-color: #FCD835;
     border-style: solid;
 }
 
 .navbar a.active:hover {
-    background-color: #0A9159;
+    background-color: #CD98D9;
 }
 
 a.post_link {
-    color: #F2D622;
+    color: #FCD835;
     text-decoration: none;
     font-weight: bold;
 }
@@ -96,6 +98,20 @@ a.post_link:hover {
 
 .post_header {
     text-align: center;
+}
+.advance {
+    padding: 1rem 0;
+}
+
+.back {
+    display: inline-block;
+    width: 50%;
+}
+
+.forward {
+    display: inline-block;
+    width: 50%;
+    text-align: right;
 }
 
 .spiral {
