@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+body {
+    padding: 2rem;
+    background-color: #D1B2B2;
+}
+
+.canvas {
+    margin: inherit auto;
+    width: 90%;
+    max-width: 75rem;
+    padding: 1rem 3rem;
+    background-color: #D1B2B2;
+    border: #BF1E02 solid 8px;
+    color: #BF1E02;
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+.exit {
+    display: block;
+    border: #BF1E02 solid 4px;
+    float: right;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: #BF1E02
+}

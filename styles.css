@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Hind+Siliguri&display=swap');
 
 body {
     padding: 2rem;
@@ -6,7 +6,7 @@ body {
 }
 
 h1, h2 {
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Alata', sans-serif;
 }
 
 h1 {
@@ -21,7 +21,7 @@ h2 {
 }
 
 p, li, figcaption {
-    font-family: 'Comic Neue', sans-serif;
+    font-family: 'Hind Siliguri', sans-serif;
     font-size: 1.4rem;
     color: #FCEBF8;
 }
@@ -50,18 +50,23 @@ img {
 
 .navbar {
     background-color: #FCEBF8;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 4px;
+    margin-bottom: -4px;
 }
 
 .navbar a {
     text-align: center;
-    display: inline-block;
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Alata', sans-serif;
     font-weight: bold;
     font-size: 1.4rem;
     color: #801757;
     text-decoration: none;
     padding: 1rem 2rem;
     border: #801757 dashed 4px;
+    border-bottom-color:#FCD835;
 }
 
 .navbar a:hover {
@@ -73,7 +78,7 @@ img {
 .navbar a.active {
     background-color:#801757;
     color:#FCD835;
-    border-color: #FCD835;
+    border-color:#FCD835;
     border-style: solid;
 }
 
