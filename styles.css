@@ -51,7 +51,6 @@ img {
 .navbar {
     background-color: #FCEBF8;
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: row;
     gap: 4px;
     margin-bottom: -4px;
@@ -67,7 +66,6 @@ img {
     padding: 1rem 2rem;
     border: #801757 dashed 4px;
     border-bottom-color:#FCD835;
-    text-wrap: nowrap;
 }
 
 .navbar a:hover {
