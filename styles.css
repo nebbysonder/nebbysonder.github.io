@@ -67,6 +67,7 @@ img {
     padding: 1rem 2rem;
     border: #801757 dashed 4px;
     border-bottom-color:#FCD835;
+    text-wrap: nowrap;
 }
 
 .navbar a:hover {
