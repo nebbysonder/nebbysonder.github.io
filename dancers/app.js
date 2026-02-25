@@ -28,6 +28,8 @@ const fetchFeedBtn = document.getElementById("fetchFeedBtn");
 
 const ctx = overlay.getContext("2d");
 
+const DEFAULT_CLIENT_ID = "https://nebbysonder.github.io/dancers/oauth-client-metadata.json";
+
 const CAM_W = 320;
 const CAM_H = 240;
 const LINE_FRAC = 0.55;
@@ -401,7 +403,12 @@ fetchFeedBtn.addEventListener("click", async () => {
   }
 });
 
-initOAuth(window.sessionStorage.getItem("bsky_client_id"))
+const storedClientId = window.sessionStorage.getItem("bsky_client_id");
+if (clientIdInput && !clientIdInput.value) {
+  clientIdInput.value = storedClientId || DEFAULT_CLIENT_ID;
+}
+
+initOAuth(clientIdInput.value)
   .then((session) => {
     if (session) {
       setAuthStatus("connected", true);

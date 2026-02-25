@@ -1,12 +1,12 @@
 {
-  "client_id": "https://example.com/web/oauth-client-metadata.json",
+  "client_id": "https://nebbysonder.github.io/dancers/oauth-client-metadata.json",
   "client_name": "Dancestagram Lite Web",
-  "client_uri": "https://example.com",
-  "logo_uri": "https://example.com/logo.png",
-  "policy_uri": "https://example.com/privacy",
-  "tos_uri": "https://example.com/terms",
+  "client_uri": "https://nebbysonder.github.io/dancers/",
+  "logo_uri": "https://nebbysonder.github.io/dancers/logo.svg",
+  "policy_uri": "https://nebbysonder.github.io/dancers/privacy.html",
+  "tos_uri": "https://nebbysonder.github.io/dancers/terms.html",
   "redirect_uris": [
-    "https://example.com/web/"
+    "https://nebbysonder.github.io/dancers/"
   ],
   "grant_types": [
     "authorization_code",
