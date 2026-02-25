@@ -1,8 +1,6 @@
 import { getBucketStatus, getNextFromBucket, seedBuckets } from "./mock_api.js";
 import {
   initOAuth,
-  signIn,
-  signOut,
   hasSession,
   resolveFeedUri,
   fetchFeed,
@@ -17,11 +15,6 @@ const motionReadout = document.getElementById("motionReadout");
 const stateReadout = document.getElementById("stateReadout");
 const bucketLabel = document.getElementById("bucketLabel");
 const bucketCounts = document.getElementById("bucketCounts");
-const clientIdInput = document.getElementById("clientIdInput");
-const handleInput = document.getElementById("handleInput");
-const loginBtn = document.getElementById("loginBtn");
-const logoutBtn = document.getElementById("logoutBtn");
-const authStatus = document.getElementById("authStatus");
 const feedHandleInput = document.getElementById("feedHandleInput");
 const feedSlugInput = document.getElementById("feedSlugInput");
 const fetchFeedBtn = document.getElementById("fetchFeedBtn");
@@ -58,12 +51,6 @@ const frameCtx = frameCanvas.getContext("2d", { willReadFrequently: true });
 
 const buckets = ["return", "resonance", "retreat"];
 let nextBucketIndex = 1;
-
-function setAuthStatus(message, connected) {
-  authStatus.textContent = `Auth: ${message}`;
-  loginBtn.disabled = Boolean(connected);
-  logoutBtn.disabled = !connected;
-}
 
 function resizeOverlay() {
   if (video.videoWidth && video.videoHeight) {
@@ -326,35 +313,6 @@ window.addEventListener("resize", resizeOverlay);
 startBtn.addEventListener("click", handleStart);
 stopBtn.addEventListener("click", handleStop);
 
-loginBtn.addEventListener("click", async () => {
-  const handle = handleInput.value.trim();
-  const clientId = clientIdInput.value.trim();
-  if (!clientId) {
-    alert("Enter the OAuth client metadata URL.");
-    return;
-  }
-  if (!handle) {
-    alert("Enter a Bluesky handle.");
-    return;
-  }
-  setAuthStatus("connecting...", false);
-  try {
-    window.sessionStorage.setItem("bsky_client_id", clientId);
-    await initOAuth(clientId);
-    await signIn(handle);
-    setAuthStatus("connected", true);
-  } catch (err) {
-    console.error(err);
-    setAuthStatus("failed", false);
-    alert("OAuth failed. Check console for details.");
-  }
-});
-
-logoutBtn.addEventListener("click", async () => {
-  await signOut();
-  setAuthStatus("not connected", false);
-});
-
 fetchFeedBtn.addEventListener("click", async () => {
   const feedHandle = feedHandleInput.value.trim();
   const feedSlug = feedSlugInput.value.trim();
@@ -404,19 +362,6 @@ fetchFeedBtn.addEventListener("click", async () => {
 });
 
 const storedClientId = window.sessionStorage.getItem("bsky_client_id");
-if (clientIdInput && !clientIdInput.value) {
-  clientIdInput.value = storedClientId || DEFAULT_CLIENT_ID;
-}
-
-initOAuth(clientIdInput.value)
-  .then((session) => {
-    if (session) {
-      setAuthStatus("connected", true);
-    } else {
-      setAuthStatus("not connected", false);
-    }
-  })
-  .catch((err) => {
-    console.error(err);
-    setAuthStatus("failed", false);
-  });
+initOAuth(storedClientId || DEFAULT_CLIENT_ID).catch((err) => {
+  console.error(err);
+});

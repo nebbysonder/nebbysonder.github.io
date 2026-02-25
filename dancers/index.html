@@ -15,30 +15,11 @@
       <div class="controls">
         <button id="startBtn" type="button">Start Camera</button>
         <button id="stopBtn" type="button" disabled>Stop</button>
+        <a class="button-link" href="login.html">Login</a>
       </div>
     </header>
 
     <main class="layout">
-      <section class="panel">
-        <h2>Login</h2>
-        <label class="field">
-          <span>Client ID URL</span>
-          <input id="clientIdInput" type="text" placeholder="https://your-domain/oauth-client-metadata.json" />
-        </label>
-        <label class="field">
-          <span>Bluesky handle</span>
-          <input id="handleInput" type="text" placeholder="your-handle.bsky.social" />
-        </label>
-        <div class="controls">
-          <button id="loginBtn" type="button">Connect</button>
-          <button id="logoutBtn" type="button" disabled>Disconnect</button>
-        </div>
-        <div class="readout" id="authStatus">Auth: not connected</div>
-        <p class="helper">
-          OAuth requires a public client metadata URL. For local dev, use a tunnel (ngrok, Cloudflare).
-        </p>
-      </section>
-
       <section class="panel">
         <h2>Camera</h2>
         <div class="video-shell">

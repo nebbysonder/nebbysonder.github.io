@@ -6,7 +6,8 @@
   "policy_uri": "https://nebbysonder.github.io/dancers/privacy.html",
   "tos_uri": "https://nebbysonder.github.io/dancers/terms.html",
   "redirect_uris": [
-    "https://nebbysonder.github.io/dancers/"
+    "https://nebbysonder.github.io/dancers/",
+    "https://nebbysonder.github.io/dancers/login.html"
   ],
   "grant_types": [
     "authorization_code",
