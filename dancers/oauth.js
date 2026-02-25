@@ -1,5 +1,5 @@
-import { BrowserOAuthClient } from "https://esm.sh/@atproto/oauth-client-browser@0.3.28";
-import { Agent } from "https://esm.sh/@atproto/api@0.16.2";
+import { BrowserOAuthClient } from "https://cdn.jsdelivr.net/npm/@atproto/oauth-client-browser@0.3.28/+esm";
+import { Agent } from "https://cdn.jsdelivr.net/npm/@atproto/api@0.16.2/+esm";
 
 const HANDLE_RESOLVER = "https://bsky.social";
 let oauthClient = null;
