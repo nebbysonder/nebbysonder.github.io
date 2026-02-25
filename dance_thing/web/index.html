@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dancestagram Lite (Web MVP)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="retro">
+    <header class="site-header">
+      <div class="brand">
+        <span class="brand-title">Dancestagram Lite</span>
+        <span class="brand-subtitle">Web MVP</span>
+      </div>
+      <div class="controls">
+        <button id="startBtn" type="button">Start Camera</button>
+        <button id="stopBtn" type="button" disabled>Stop</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h2>Login</h2>
+        <label class="field">
+          <span>Client ID URL</span>
+          <input id="clientIdInput" type="text" placeholder="https://your-domain/oauth-client-metadata.json" />
+        </label>
+        <label class="field">
+          <span>Bluesky handle</span>
+          <input id="handleInput" type="text" placeholder="your-handle.bsky.social" />
+        </label>
+        <div class="controls">
+          <button id="loginBtn" type="button">Connect</button>
+          <button id="logoutBtn" type="button" disabled>Disconnect</button>
+        </div>
+        <div class="readout" id="authStatus">Auth: not connected</div>
+        <p class="helper">
+          OAuth requires a public client metadata URL. For local dev, use a tunnel (ngrok, Cloudflare).
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>Camera</h2>
+        <div class="video-shell">
+          <video id="camera" autoplay playsinline muted></video>
+          <canvas id="overlay"></canvas>
+        </div>
+        <div class="readout" id="motionReadout">Motion: --</div>
+        <div class="readout" id="stateReadout">State: idle</div>
+      </section>
+
+      <section class="panel">
+        <h2>Feed</h2>
+        <label class="field">
+          <span>Feed handle</span>
+          <input id="feedHandleInput" type="text" placeholder="alice.bsky.social" />
+        </label>
+        <label class="field">
+          <span>Feed slug</span>
+          <input id="feedSlugInput" type="text" placeholder="my-feed" />
+        </label>
+        <div class="controls">
+          <button id="fetchFeedBtn" type="button">Fetch Feed</button>
+        </div>
+        <div class="feed-shell">
+          <img id="feedImage" alt="Feed" />
+        </div>
+        <div class="bucket-row">
+          <span id="bucketLabel">Bucket: resonance</span>
+          <span id="bucketCounts">return 0 | resonance 0 | retreat 0</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Press Start, then crouch to advance.</span>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

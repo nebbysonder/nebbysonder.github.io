@@ -1,0 +1,24 @@
+{
+  "client_id": "https://example.com/web/oauth-client-metadata.json",
+  "client_name": "Dancestagram Lite Web",
+  "client_uri": "https://example.com",
+  "logo_uri": "https://example.com/logo.png",
+  "policy_uri": "https://example.com/privacy",
+  "tos_uri": "https://example.com/terms",
+  "redirect_uris": [
+    "https://example.com/web/"
+  ],
+  "grant_types": [
+    "authorization_code",
+    "refresh_token"
+  ],
+  "response_types": [
+    "code"
+  ],
+  "application_type": "web",
+  "token_endpoint_auth_method": "none",
+  "dpop_bound_access_tokens": true,
+  "scope": "atproto transition:generic",
+  "software_id": "dancestagram-lite-web",
+  "software_version": "0.1.0"
+}
