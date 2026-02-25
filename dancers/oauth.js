@@ -1,5 +1,5 @@
-import { BrowserOAuthClient } from "https://cdn.jsdelivr.net/npm/@atproto/oauth-client-browser@0.3.28/+esm";
-import { Agent } from "https://cdn.jsdelivr.net/npm/@atproto/api@0.16.2/+esm";
+import { BrowserOAuthClient } from "https://unpkg.com/@atproto/oauth-client-browser@0.3.28/dist/index.js?module";
+import { Agent } from "https://unpkg.com/@atproto/api@0.16.2/dist/index.js?module";
 
 const HANDLE_RESOLVER = "https://bsky.social";
 let oauthClient = null;
