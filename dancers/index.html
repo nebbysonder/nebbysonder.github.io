@@ -7,55 +7,62 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="retro">
-    <header class="site-header">
-      <div class="brand">
-        <span class="brand-title">Dancestagram Lite</span>
-        <span class="brand-subtitle">Web MVP</span>
-      </div>
-      <div class="controls">
-        <button id="startBtn" type="button">Start Camera</button>
-        <button id="stopBtn" type="button" disabled>Stop</button>
-        <a class="button-link" href="login.html">Login</a>
-      </div>
-    </header>
-
-    <main class="layout">
-      <section class="panel">
-        <h2>Camera</h2>
-        <div class="video-shell">
-          <video id="camera" autoplay playsinline muted></video>
-          <canvas id="overlay"></canvas>
+    <main class="app">
+      <section class="feed">
+        <div class="topbar">
+          <div class="brand">
+            <span class="brand-title">Dancestagram Lite</span>
+            <span class="brand-subtitle">Web MVP</span>
+          </div>
+          <div class="controls">
+            <button id="startBtn" type="button">Start Camera</button>
+            <button id="stopBtn" type="button" disabled>Stop</button>
+          </div>
         </div>
-        <div class="readout" id="motionReadout">Motion: --</div>
-        <div class="readout" id="stateReadout">State: idle</div>
-      </section>
 
-      <section class="panel">
-        <h2>Feed</h2>
-        <label class="field">
-          <span>Feed handle</span>
-          <input id="feedHandleInput" type="text" placeholder="alice.bsky.social" />
-        </label>
-        <label class="field">
-          <span>Feed slug</span>
-          <input id="feedSlugInput" type="text" placeholder="my-feed" />
-        </label>
-        <div class="controls">
-          <button id="fetchFeedBtn" type="button">Fetch Feed</button>
+        <div class="bottombar feed-menu">
+          <span class="menu-label">Feed Picker</span>
+          <div class="feed-input-row">
+            <label class="field">
+              <span>Feed URL</span>
+              <input id="feedUrlInput" type="text" placeholder="Paste feed URL" />
+            </label>
+            <div class="controls">
+              <button id="fetchFeedBtn" type="button" class="icon-button" aria-label="Fetch feed">▶</button>
+            </div>
+          </div>
+          <div class="preset-row">
+            <button id="presetCnyBtn" type="button" class="preset-button">Chinese New Year</button>
+            <button id="presetDanceBtn" type="button" class="preset-button">Dance</button>
+            <button id="presetBirdsBtn" type="button" class="preset-button">Birds</button>
+            <button id="presetGardenBtn" type="button" class="preset-button">Gardening</button>
+          </div>
         </div>
+
+        <div class="debug-row debug-top">
+          <span id="stateReadout">State: idle</span>
+          <span id="hudBelow">Below: --</span>
+          <span id="hudAbove">Above: --</span>
+          <span id="hudDiff">Diff: --</span>
+          <span id="hudLatency">Latency: --</span>
+          <span id="hudLoad">Load: --</span>
+        </div>
+
         <div class="feed-shell">
           <img id="feedImage" alt="Feed" />
+          <div class="camera-overlay">
+            <video id="camera" autoplay playsinline muted></video>
+            <canvas id="overlay"></canvas>
+          </div>
         </div>
-        <div class="bucket-row">
-          <span id="bucketLabel">Bucket: resonance</span>
-          <span id="bucketCounts">return 0 | resonance 0 | retreat 0</span>
+
+        <div class="status-row">
+          <span id="bucketLabel">Bucket: medium</span>
+          <span id="bucketCounts">slow 0 | medium 0 | fast 0</span>
+          <span id="appStatus">Status: ok</span>
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <span>Press Start, then crouch to advance.</span>
-    </footer>
 
     <script type="module" src="app.js"></script>
   </body>
